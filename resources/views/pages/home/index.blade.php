@@ -1,1 +1,23 @@
-<h1>hello</h1>
+@extends('layouts.app')
+
+@section('content')
+    <div class="container text-center ma">
+        <div class="row">
+            <div class="col">
+                <h1 class="page-title">Home Page</h1>
+            </div>
+
+        </div>
+    </div>
+@endsection
+
+@push('css')
+<style>
+    .page-title{
+        padding-top: 5vh;
+        color: #0827c9;
+        font-size: 5rem
+    }
+</style>
+
+@endpush
