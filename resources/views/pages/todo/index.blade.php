@@ -60,6 +60,10 @@
                         @endif</td>
                     <td>
                         <a href="{{ route('todo.delete',$task->id) }}"><i class="fa-regular fa-trash-can"></i></a>
+
+                    </td>
+                    <td>
+                        <a href="{{ route('todo.done',$task->id) }}"><i class="fa-brands fa-microblog"></i></a>
                     </td>
                 </tr>
             @endforeach

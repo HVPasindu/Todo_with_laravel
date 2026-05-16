@@ -34,8 +34,26 @@ class TodoController extends Controller
         if (!$task) {
                 return redirect()->back();
         }
-        
+
         $task->delete();
+        return redirect()->back();
+    }
+
+    public function done($task_id){
+        //dd($task_id);
+        $task = $this->task->find($task_id);
+
+        if (!$task) {
+                return redirect()->back();
+        }
+
+        if($task->done==0){
+            $task->done=1;
+
+        }else{
+            $task->done=0;
+        }
+        $task->update();
         return redirect()->back();
     }
 }
