@@ -58,7 +58,9 @@
                         @else
                             <span class="badge bg-success  text-white">Completed</span>
                         @endif</td>
-                    <td>hello</td>
+                    <td>
+                        <a href="{{ route('todo.delete',$task->id) }}"><i class="fa-regular fa-trash-can"></i></a>
+                    </td>
                 </tr>
             @endforeach
 
