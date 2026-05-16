@@ -60,6 +60,7 @@
                         @endif</td>
                     <td>
                         <a href="{{ route('todo.delete',$task->id) }}"><i class="fa-regular fa-trash-can"></i></a>
+                        <a href="{{ route('updates',$task->id) }}"><i class="fa-solid fa-file-arrow-up"></i></a>
 
                     </td>
                     <td>

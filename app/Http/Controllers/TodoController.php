@@ -56,4 +56,6 @@ class TodoController extends Controller
         $task->update();
         return redirect()->back();
     }
+
+    
 }
