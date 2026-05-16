@@ -34,6 +34,37 @@
         <button type="submit" class="btn btn-primary">Submit</button>
 
     </form>
+    <table class="table table-style table-bordered border-primary table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">status</th>
+                <th scope="col">Action</th>
+                <th scope="col">Status Update</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($tasks as $key => $task)
+                <tr>
+                    <th scope="row">{{ ++$key }}</th>
+                    <td>{{ $task->name }}</td>
+                    <td>{{ $task->address }}</td>
+                    <td>
+                        @if ($task->done ==0)
+                            <span class="badge bg-danger text-white">Note Completed</span>
+                        @else
+                            <span class="badge bg-success  text-white">Completed</span>
+                        @endif</td>
+                    <td>hello</td>
+                </tr>
+            @endforeach
+
+
+        </tbody>
+    </table>
 @endsection
 
 @push('css')
@@ -42,6 +73,10 @@
             padding-top: 5vh;
             color: #65c908;
             font-size: 5rem
+        }
+
+        .table-style {
+            margin-top: 5vh;
         }
     </style>
 @endpush
